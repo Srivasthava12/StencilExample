@@ -1,0 +1,7 @@
+@use "@material/drawer/_index.scss";
+@use "@material/list/_index.scss";
+
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list.core-styles;
