@@ -22,11 +22,16 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@material/drawer": "^12.0.0",
-    "@material/list": "^12.0.0",
+    "@material/button": "^12.0.0",
+    "@material/drawer": "11.0.0",
+    "@material/list": "11.0.0",
+    "@material/ripple": "^12.0.0",
     "@stencil/core": "^2.7.0",
     "@stencil/sass": "^2.0.0-0",
-    "material-components-web": "^12.0.0"
+    "material-components-web": "11.0.0",
+    "node-sass": "^6.0.1",
+    "sass": "^1.39.0",
+    "sass-loader": "^12.1.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",

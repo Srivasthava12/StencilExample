@@ -1,7 +1,31 @@
-@use "@material/drawer/_index.scss";
-@use "@material/list/_index.scss";
+body {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .mdc-drawer-app-content {
+    flex: auto;
+    overflow: auto;
+    position: relative;
+    background-color: red;
+  }
+  
+  .main-content {
+    overflow: auto;
+    height: 100%;
+    background-color: red;
 
-@include drawer.core-styles;
-@include drawer.dismissible-core-styles;
-@include drawer.modal-core-styles;
-@include list.core-styles;
+  }
+  
+  .app-bar {
+    position: absolute;
+    background-color: red;
+
+  }
+  
+  // Only apply this style if below top app bar.
+  .mdc-top-app-bar {
+    z-index: 7;
+    background-color: red;
+
+  }

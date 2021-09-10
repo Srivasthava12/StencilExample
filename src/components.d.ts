@@ -9,6 +9,8 @@ export namespace Components {
     interface FireButton {
         "text": string;
     }
+    interface MdcDrawer {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -31,6 +33,12 @@ declare global {
         prototype: HTMLFireButtonElement;
         new (): HTMLFireButtonElement;
     };
+    interface HTMLMdcDrawerElement extends Components.MdcDrawer, HTMLStencilElement {
+    }
+    var HTMLMdcDrawerElement: {
+        prototype: HTMLMdcDrawerElement;
+        new (): HTMLMdcDrawerElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -39,12 +47,15 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "fire-button": HTMLFireButtonElement;
+        "mdc-drawer": HTMLMdcDrawerElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
     interface FireButton {
         "text"?: string;
+    }
+    interface MdcDrawer {
     }
     interface MyComponent {
         /**
@@ -62,6 +73,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "fire-button": FireButton;
+        "mdc-drawer": MdcDrawer;
         "my-component": MyComponent;
     }
 }
@@ -70,6 +82,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "fire-button": LocalJSX.FireButton & JSXBase.HTMLAttributes<HTMLFireButtonElement>;
+            "mdc-drawer": LocalJSX.MdcDrawer & JSXBase.HTMLAttributes<HTMLMdcDrawerElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
